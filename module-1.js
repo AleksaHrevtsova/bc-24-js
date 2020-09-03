@@ -33,10 +33,23 @@
 // == task-10 == //
 // Написати гру камінь ножиці папір. Де компютер загадує своє значення потім користувач вводить свій варіант і далі ми бачимо результат на екпані хто виграв
 
+// && ищет true до конца или спотыкается на первом false
+console.log(1 && true && "js"); // js
+console.log(0 && true && "js"); // 0
+console.log(1 && false && "js"); // false
+console.log(1 && "false" && "js"); // js
 
+// || ищет false до конца или спотыкается на первом true
+console.log(0 || false || "" || "1"); // 1
+console.log(0 || false || "" || undefined); // undefined
+console.log(1 || true || "fff" || undefined); // 1
+console.log(0 || true || "" || undefined); // true
 
-
-
-
-
-
+let userAge = 23;
+if (userAge >= 20 && userAge <= 30) {
+  console.log("Возраст пользователья от 20 до 30 лет");
+}
+userAge = 32;
+if (userAge >= 20 || userAge <= 30) {
+  console.log("Возраст пользователья от 20 до 30 лет");
+}
